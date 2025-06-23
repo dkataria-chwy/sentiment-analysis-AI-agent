@@ -1,0 +1,189 @@
+{
+  "sentiment_counts": {
+    "positive": 7,
+    "negative": 3
+  },
+  "sentiment_percentages": {
+    "positive": 70.0,
+    "negative": 30.0
+  },
+  "star_rating_distribution": {
+    "5": 7,
+    "3": 1,
+    "1": 1,
+    "2": 1
+  },
+  "top_keywords": {
+    "positive": [
+      "belt leash",
+      "leash heavy",
+      "use leash",
+      "leash",
+      "leash work",
+      "week leash",
+      "mix leash",
+      "leash time",
+      "leash make",
+      "bigger leash",
+      "free leash",
+      "leash long",
+      "leash let",
+      "golden retriever",
+      "recommend belt"
+    ],
+    "neutral": [],
+    "negative": [
+      "dog leash",
+      "leash carry",
+      "leash heavier",
+      "different leash",
+      "leash",
+      "leash way",
+      "leash tight",
+      "couldn leash",
+      "small dog",
+      "waist dog",
+      "la dog",
+      "dog",
+      "dog couldn",
+      "30 la",
+      "heavy 30"
+    ]
+  },
+  "sample_reviews": {
+    "positive": [
+      "For such a low price I wa impressed by the quality of this product I just had surgery and have limited use of my arm for the next few week - this leash let me walk my bulb pit who pull like no other Easy to used I'm thrilled",
+      "I wa looking at a well known name brand version at my local pet store which wa selling for $38. now although I loved the color of the $38 one I just couldn't pay the price I wa pleasantly surprised when this one arrived a the webbing wa thicker and more durable than what I expected Definitely pleased with this purchase",
+      "This work great for my 20 la terrier mix The leash is long enough to give him some room to roam but still keep him close The clasp are bigger than his leash but not too heavy for him I've used while traveling and shopping work great"
+    ],
+    "neutral": [],
+    "negative": [
+      "This is not good for a small dog the leash is heavier than her I recommend making a version that ha a lighter clasp a well a lighter material",
+      "It is not long enough and it is too heavy for a 30 la dog",
+      "The leash is way too short and coiled way too tight to be useful Attached it to my waist i'm 5'4) my dog couldn't move to my side because the leash were too tight and the loop were in the front causing me to literally walk over them when attempting to use this Gave this two star because I use the belt still but with different leash and to carry other thing Super useful if you're thrifty"
+    ]
+  },
+  "keyword_matched_samples": {
+    "positive": {
+      "belt leash": "We use this leash all of the time I definitely recommend this belt/leash.",
+      "leash heavy": "This work great for my 20 la terrier mix The leash is long enough to give him some room to roam but still keep him close The clasp are bigger than his leash but not too heavy for him I've used while traveling and shopping work great",
+      "use leash": "We use this leash all of the time I definitely recommend this belt/leash.",
+      "leash": "We use this leash all of the time I definitely recommend this belt/leash.",
+      "leash work": "This work great for my 20 la terrier mix The leash is long enough to give him some room to roam but still keep him close The clasp are bigger than his leash but not too heavy for him I've used while traveling and shopping work great",
+      "week leash": "For such a low price I wa impressed by the quality of this product I just had surgery and have limited use of my arm for the next few week - this leash let me walk my bulb pit who pull like no other Easy to used I'm thrilled",
+      "mix leash": "This work great for my 20 la terrier mix The leash is long enough to give him some room to roam but still keep him close The clasp are bigger than his leash but not too heavy for him I've used while traveling and shopping work great",
+      "leash time": "We use this leash all of the time I definitely recommend this belt/leash.",
+      "leash make": "Love this hand free leash It make running and walking so much easier",
+      "bigger leash": "This work great for my 20 la terrier mix The leash is long enough to give him some room to roam but still keep him close The clasp are bigger than his leash but not too heavy for him I've used while traveling and shopping work great",
+      "free leash": "Love this hand free leash It make running and walking so much easier",
+      "leash long": "This work great for my 20 la terrier mix The leash is long enough to give him some room to roam but still keep him close The clasp are bigger than his leash but not too heavy for him I've used while traveling and shopping work great",
+      "leash let": "For such a low price I wa impressed by the quality of this product I just had surgery and have limited use of my arm for the next few week - this leash let me walk my bulb pit who pull like no other Easy to used I'm thrilled",
+      "golden retriever": "I recommended this for my golden retriever who weighs 70 pound and this is so good to go to the beach and stuff",
+      "recommend belt": "We use this leash all of the time I definitely recommend this belt/leash."
+    },
+    "neutral": {},
+    "negative": {
+      "dog leash": "This is not good for a small dog the leash is heavier than her I recommend making a version that ha a lighter clasp a well a lighter material",
+      "leash carry": "The leash is way too short and coiled way too tight to be useful Attached it to my waist i'm 5'4) my dog couldn't move to my side because the leash were too tight and the loop were in the front causing me to literally walk over them when attempting to use this Gave this two star because I use the belt still but with different leash and to carry other thing Super useful if you're thrifty",
+      "leash heavier": "This is not good for a small dog the leash is heavier than her I recommend making a version that ha a lighter clasp a well a lighter material",
+      "different leash": "The leash is way too short and coiled way too tight to be useful Attached it to my waist i'm 5'4) my dog couldn't move to my side because the leash were too tight and the loop were in the front causing me to literally walk over them when attempting to use this Gave this two star because I use the belt still but with different leash and to carry other thing Super useful if you're thrifty",
+      "leash": "This is not good for a small dog the leash is heavier than her I recommend making a version that ha a lighter clasp a well a lighter material",
+      "leash way": "The leash is way too short and coiled way too tight to be useful Attached it to my waist i'm 5'4) my dog couldn't move to my side because the leash were too tight and the loop were in the front causing me to literally walk over them when attempting to use this Gave this two star because I use the belt still but with different leash and to carry other thing Super useful if you're thrifty",
+      "leash tight": "The leash is way too short and coiled way too tight to be useful Attached it to my waist i'm 5'4) my dog couldn't move to my side because the leash were too tight and the loop were in the front causing me to literally walk over them when attempting to use this Gave this two star because I use the belt still but with different leash and to carry other thing Super useful if you're thrifty",
+      "couldn leash": "The leash is way too short and coiled way too tight to be useful Attached it to my waist i'm 5'4) my dog couldn't move to my side because the leash were too tight and the loop were in the front causing me to literally walk over them when attempting to use this Gave this two star because I use the belt still but with different leash and to carry other thing Super useful if you're thrifty",
+      "small dog": "This is not good for a small dog the leash is heavier than her I recommend making a version that ha a lighter clasp a well a lighter material",
+      "waist dog": "The leash is way too short and coiled way too tight to be useful Attached it to my waist i'm 5'4) my dog couldn't move to my side because the leash were too tight and the loop were in the front causing me to literally walk over them when attempting to use this Gave this two star because I use the belt still but with different leash and to carry other thing Super useful if you're thrifty",
+      "la dog": "This is not good for a small dog the leash is heavier than her I recommend making a version that ha a lighter clasp a well a lighter material",
+      "dog": "This is not good for a small dog the leash is heavier than her I recommend making a version that ha a lighter clasp a well a lighter material",
+      "dog couldn": "The leash is way too short and coiled way too tight to be useful Attached it to my waist i'm 5'4) my dog couldn't move to my side because the leash were too tight and the loop were in the front causing me to literally walk over them when attempting to use this Gave this two star because I use the belt still but with different leash and to carry other thing Super useful if you're thrifty",
+      "30 la": "It is not long enough and it is too heavy for a 30 la dog",
+      "heavy 30": "It is not long enough and it is too heavy for a 30 la dog"
+    }
+  },
+  "sentiment_confidence": {
+    "positive": {
+      "avg": 0.6992773489528451,
+      "min": 0.03122005596408979,
+      "max": 0.9987128490658713,
+      "std": 0.4229010590237489
+    },
+    "neutral": {
+      "avg": 0.11028786890053324,
+      "min": 0.0010364295358645558,
+      "max": 0.3902100792538107,
+      "std": 0.14499857682140377
+    },
+    "negative": {
+      "avg": 0.19043478214662168,
+      "min": 0.00025072139826414896,
+      "max": 0.7187867114587514,
+      "std": 0.28656276534406006
+    }
+  },
+  "review_length_stats": {
+    "positive": {
+      "avg": 37.42857142857143,
+      "min": 13,
+      "max": 61,
+      "median": 47.0
+    },
+    "neutral": null,
+    "negative": {
+      "avg": 40.333333333333336,
+      "min": 15,
+      "max": 77,
+      "median": 29.0
+    }
+  },
+  "time_trends": {
+    "2018-05": {
+      "positive": 1
+    },
+    "2018-12": {
+      "positive": 1
+    },
+    "2018-10": {
+      "positive": 2
+    },
+    "2018-01": {
+      "negative": 1
+    },
+    "2018-06": {
+      "positive": 2,
+      "negative": 1
+    },
+    "2018-04": {
+      "positive": 1
+    },
+    "2019-03": {
+      "negative": 1
+    }
+  },
+  "common_bigrams": {
+    "positive": [
+      "i wa",
+      "this leash",
+      "of the",
+      "work great",
+      "for my",
+      "pull like",
+      "my arm",
+      "price i",
+      "i just",
+      "we use"
+    ],
+    "neutral": [],
+    "negative": [
+      "the leash",
+      "is not",
+      "for a",
+      "leash is",
+      "a lighter",
+      "it is",
+      "way too",
+      "too tight",
+      "to my",
+      "this is"
+    ]
+  }
+}
