@@ -1,67 +1,75 @@
-# Chewy Customer Sentiment Analysis Agent
+# Customer Sentiment Analysis AI Agent
 
-## Overview
-A full-stack AI agent that analyzes customer sentiment for products based on SKU input. It queries Snowflake for customer reviews, processes them through a LangGraph pipeline, and displays results in a modern React UI.
+## Project Overview
+This project is a research and experimentation platform to explore the use of Large Language Models (LLMs) and GPT for customer sentiment analysis. It provides a full-stack AI-powered solution to ingest, clean, analyze, and summarize customer reviews, surfacing actionable insights for business leadership and analysts.
 
-## Tech Stack
-- **Frontend**: Next.js (React, TypeScript, Tailwind CSS)
-- **Backend**: Python FastAPI, LangGraph, scikit-learn, KeyBERT, OpenAI
-- **Database**: Snowflake
-- **AI Models**: OpenAI GPT-4.1, text-embedding-3-small, gpt-4.1-nano
+## Key Features
+- **Automated Review Ingestion:** Fetches customer reviews for a given SKU from a data warehouse (e.g., Snowflake).
+- **Advanced Text Cleaning:** Multi-step pipeline (HTML, encoding, emoji, control, whitespace) with both classic and LLM-based options.
+- **Embedding & Classification:** Uses vector embeddings and a logistic regression model for sentiment classification.
+- **Keyword Extraction:** Identifies key themes and topics from reviews.
+- **Statistical Analysis:** Computes review stats and sentiment breakdowns.
+- **Executive Summary:** Generates a GPT-powered summary of customer sentiment and key findings.
+- **Modern UI:** Next.js frontend with real-time progress, stepper, and logs for transparency.
 
-## Project Structure
-```
-chewy-customer-sentiment-analysis-agent/
-├── frontend/                    # Next.js React app
-│   ├── components/
-│   ├── hooks/
-│   ├── pages/
-│   ├── styles/
-│   ├── utils/
-│   └── types/
-├── backend/                     # Python FastAPI server
-│   ├── models/
-│   ├── nodes/
-│   ├── core/
-│   ├── api/
-│   ├── utils/
-│   └── main.py
-├── .env.template
-├── requirements.txt
-├── package.json
-└── README.md
-```
+## Architecture
+- **Backend:** Python (FastAPI)
+  - Async job orchestration and step tracking
+  - Classic and LLM-based text cleaning
+  - Sentiment model inference
+  - REST API for job control and status
+- **Frontend:** Next.js (React, TypeScript)
+  - Dashboard for job submission and monitoring
+  - Stepper UI with real-time progress and logs
+  - Executive summary and data visualizations
 
-## Setup
+## Setup Instructions
+
 ### Prerequisites
+- Python 3.11+
 - Node.js 18+
-- Python 3.8+
-- Snowflake account & credentials
-- OpenAI API key
+- (Optional) Access to Snowflake or your review data source
 
-### Installation
-```bash
+### 1. Clone the Repository
+```sh
+git clone https://github.com/dkataria-chwy/sentiment-analysis-AI-agent.git
+cd sentiment-analysis-AI-agent
+```
+
+### 2. Backend Setup
+```sh
+python3 -m venv venv
+source venv/bin/activate
+pip install -r backend/requirements.txt
+# (Optional) Set up your Snowflake credentials in .env
+cd backend
+python main.py
+```
+- The backend runs on `http://localhost:8000`
+
+### 3. Frontend Setup
+```sh
+cd frontend
 npm install
-pip install -r requirements.txt
+npm run dev
 ```
+- The frontend runs on `http://localhost:3000`
 
-### Running the App
-```bash
-npm run dev  # Starts both frontend and backend
-```
+### 4. Usage
+- Open the frontend in your browser.
+- Enter a SKU and start the analysis.
+- Monitor progress in the dashboard stepper and logs.
+- View the executive summary and sentiment breakdowns when complete.
 
-## Usage
-1. Enter a SKU in the input field.
-2. Track progress in real-time.
-3. View executive summary, stats, and sample reviews.
-4. Export results as PDF/JSON.
+## Customization
+- **Text Cleaning:** Switch between classic and LLM-based cleaning in backend config.
+- **Model:** Replace or retrain the sentiment model in `backend/models/` as needed.
+- **Data Source:** Adapt the review ingestion logic for your data warehouse or API.
 
-## Environment Variables
-See `.env.template` for required variables.
+## Contribution & Notes
+- This project is for research and experimentation. For production, further security, error handling, and scaling would be needed.
+- Please open issues or pull requests for improvements.
 
-## Testing
-- Frontend: Jest, React Testing Library
-- Backend: pytest
+---
 
-## License
-MIT 
+© 2025 Darshan Kataria & Contributors 
