@@ -1,0 +1,27 @@
+{
+  "name": "chewy-customer-sentiment-analysis-agent",
+  "version": "1.0.0",
+  "private": true,
+  "scripts": {
+    "dev": "concurrently \"npm:start-frontend\" \"npm:start-backend\"",
+    "start-frontend": "cd frontend && npm run dev",
+    "start-backend": "cd backend && uvicorn main:app --reload --host 0.0.0.0 --port 8000",
+    "build": "cd frontend && npm run build",
+    "test": "cd frontend && npm test && cd ../backend && pytest"
+  },
+  "devDependencies": {
+    "@types/html2canvas": "^0.5.35",
+    "@types/react": "^18.3.23",
+    "@types/react-dom": "^18.3.7",
+    "concurrently": "^8.2.2",
+    "typescript": "^5.8.3"
+  },
+  "dependencies": {
+    "chartjs-plugin-zoom": "^2.2.0",
+    "html2canvas": "^1.4.1",
+    "http-proxy-middleware": "^3.0.5",
+    "react": "^18.2.0",
+    "react-dom": "^18.2.0",
+    "react-markdown": "^8.0.7"
+  }
+}

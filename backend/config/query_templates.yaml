@@ -1,0 +1,10 @@
+fetch_reviews:
+  query: |
+    select 
+      PRODUCT_PART_NUMBER as sku,
+      REVIEW_TXT as customer_review,
+      RATING as product_rating,
+      submission_tm as created_date
+    from edldb.cdm.customer_product_rating
+    where PRODUCT_PART_NUMBER = '{sku}' 
+    and moderation_status ilike 'APPROVED'

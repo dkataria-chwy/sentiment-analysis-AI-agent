@@ -1,0 +1,59 @@
+# Python
+venv/
+__pycache__/
+*.pyc
+*.pyo
+*.pyd
+
+# Jupyter Notebook
+.ipynb_checkpoints
+
+# VSCode
+.vscode/
+
+# macOS
+.DS_Store
+
+# Node
+node_modules/
+.next/
+
+# Logs
+*.log
+
+# Environment
+.env
+.env.*
+
+# Build
+build/
+dist/
+*.egg-info/
+
+# Large model/data files
+*.h5
+*.hdf5
+*.ckpt
+*.pth
+*.pkl
+*.joblib
+*.csv
+*.tsv
+*.parquet
+*.db
+*.sqlite
+
+# Ignore frontend build artifacts
+frontend/.next/
+frontend/node_modules/
+
+# Ignore backend model artifacts
+backend/models/*.pkl
+backend/models/*.joblib
+
+# Ignore system files
+Thumbs.db
+
+.env
+backend/.env
+frontend/.env
