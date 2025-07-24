@@ -19,12 +19,19 @@ def fetch_reviews(sku: str, batch_size: int = 15000):
         if not rows:
             break
         for row in rows:
-            # row: (sku, customer_review, product_rating, created_date)
+            # row: (sku, customer_review, product_rating, created_date, mc1, mc2, mc3, product_description_short, product_name, product_id, product_link)
             review = {
                 "sku": row[0],
-                "customer_review": row[1],  # can be None
+                "customer_review": row[1],
                 "product_rating": row[2],
-                "created_date": row[3]
+                "created_date": row[3],
+                "mc1": row[4],
+                "mc2": row[5],
+                "mc3": row[6],
+                "product_description_short": row[7],
+                "product_name": row[8],
+                "product_id": row[9],
+                "product_link": row[10]
             }
             if review_count < 3:
                 first_reviews.append(review)

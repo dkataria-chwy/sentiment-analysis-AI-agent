@@ -246,9 +246,18 @@ async def run_analysis_async(sku: str, job_id: str):
     jobs[job_id]["step"] = 6  # GptSummary
     await asyncio.sleep(4)
     jobs[job_id]["status"] = "complete"
+    # After fetching reviews, extract product info from the first review (if available)
+    product_info_fields = ["mc1", "mc2", "mc3", "product_name", "product_link"]
+    product_info = {k: reviews[0].get(k) if reviews else None for k in product_info_fields}
+    jobs[job_id]["product_info"] = product_info
+
+    # When saving step outputs and passing reviews, ensure these fields are included
+    # (The reviews already have these fields from fetch_reviews)
+    # When building the final API output, include product_info
     jobs[job_id]["result"] = {
         "summary": f"Fetched {len(reviews)} reviews for SKU {sku}",
         "sku": sku,
+        "product_info": product_info,
         "stats": jobs[job_id].get("stats_summary"),
     }
 

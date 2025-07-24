@@ -97,6 +97,8 @@ export default function KeywordChipList({ keywords, keywordSamples, keywordSenti
                   left: popoverPos.left,
                   maxWidth: '90vw',
                   minWidth: 200,
+                  maxHeight: 650,
+                  overflowY: 'auto',
                 }}
               >
                 <div className="text-gray-700 text-sm">
