@@ -108,11 +108,11 @@ def aggregate_aspect_sentiment(aspect_results, cleaned_reviews, top_n=10, sample
     """
     aspect_results: output from batch_llm_extract_aspects (list of dicts with 'aspects')
     cleaned_reviews: list of cleaned review dicts (same order as aspect_results)
-    Returns: list of dicts [{aspect, positive, neutral, negative, mentions, sample_reviews}]
+    Returns: list of dicts [{aspect, positive, neutral, negative, mentions, sample_reviews: {positive: [...], neutral: [...], negative: [...]}}]
     """
     from collections import defaultdict, Counter
     aspect_counts = defaultdict(lambda: Counter())
-    aspect_samples = defaultdict(list)
+    aspect_samples = defaultdict(lambda: {'positive': [], 'neutral': [], 'negative': []})
     for idx, result in enumerate(aspect_results):
         if not isinstance(result, dict):
             continue
@@ -121,8 +121,9 @@ def aggregate_aspect_sentiment(aspect_results, cleaned_reviews, top_n=10, sample
             sentiment = asp['sentiment'].lower()
             aspect_counts[aspect][sentiment] += 1
             aspect_counts[aspect]['total'] += 1
-            if len(aspect_samples[aspect]) < samples_per_aspect:
-                aspect_samples[aspect].append(cleaned_reviews[idx].get('clean', ''))
+            # Collect sample reviews per sentiment
+            if len(aspect_samples[aspect][sentiment]) < samples_per_aspect:
+                aspect_samples[aspect][sentiment].append(cleaned_reviews[idx].get('clean', ''))
     aspect_summary = []
     for aspect, counts in aspect_counts.items():
         total = counts['total']

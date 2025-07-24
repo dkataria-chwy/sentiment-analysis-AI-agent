@@ -1,10 +1,20 @@
 fetch_reviews:
   query: |
     select 
-      PRODUCT_PART_NUMBER as sku,
+      cpr.PRODUCT_PART_NUMBER as sku,
       REVIEW_TXT as customer_review,
       RATING as product_rating,
-      submission_tm as created_date
-    from edldb.cdm.customer_product_rating
-    where PRODUCT_PART_NUMBER = '{sku}' 
+      submission_tm as created_date,
+      products.product_merch_classification1 as mc1,
+      products.product_merch_classification2 as mc2,
+      products.product_merch_classification3 as mc3,
+      products.product_description_short,
+      products.product_name as product_name,
+      products.product_id,
+      'https://www.chewy.com/advantage-ii-flea-spot-treatment-dogs/dp/'||product_id as product_link
+    from edldb.cdm.customer_product_rating as cpr
+    LEFT JOIN edldb.chewybi.products AS products
+        ON cpr.product_part_number = products.product_part_number
+    where 1=1
+    and cpr.PRODUCT_PART_NUMBER = '{sku}' 
     and moderation_status ilike 'APPROVED'
