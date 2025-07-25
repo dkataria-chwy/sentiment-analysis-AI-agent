@@ -1,13 +1,15 @@
 import React, { useState, useRef, useEffect } from 'react';
 import { createPortal } from 'react-dom';
+import TrendLineChart from './TrendLineChart';
 
 interface Props {
   keywords: string[];
   keywordSamples: { [keyword: string]: string | string[] };
   keywordSentiments?: { [keyword: string]: 'positive' | 'negative' | string };
+  aspectObj?: any; // for aspect popover with trend
 }
 
-export default function KeywordChipList({ keywords, keywordSamples, keywordSentiments }: Props) {
+export default function KeywordChipList({ keywords, keywordSamples, keywordSentiments, aspectObj }: Props) {
   const [openKeyword, setOpenKeyword] = useState<string | null>(null);
   const [popoverPos, setPopoverPos] = useState<{top: number, left: number, width: number, placeAbove: boolean} | null>(null);
   const btnRefs = useRef<{[kw: string]: HTMLButtonElement | null}>({});
@@ -91,19 +93,45 @@ export default function KeywordChipList({ keywords, keywordSamples, keywordSenti
             {openKeyword === kw && popoverPos && createPortal(
               <div
                 ref={popoverRef}
-                className={`fixed z-50 border border-gray-200 rounded-xl shadow-lg p-4 w-72 ${keywordSentiments && keywordSentiments[kw] === 'positive' ? 'bg-blue-50' : keywordSentiments && keywordSentiments[kw] === 'negative' ? 'bg-[#FFF3EE]' : 'bg-white'}`}
+                className={`fixed z-50 border border-gray-200 rounded-xl shadow-lg p-4 w-[500px] ${keywordSentiments && keywordSentiments[kw] === 'positive' ? 'bg-blue-50' : keywordSentiments && keywordSentiments[kw] === 'negative' ? 'bg-[#FFF3EE]' : 'bg-white'}`}
                 style={{
                   top: popoverPos.top,
                   left: popoverPos.left,
-                  maxWidth: '90vw',
-                  minWidth: 200,
+                  maxWidth: '95vw',
+                  minWidth: 300,
                   maxHeight: 650,
                   overflowY: 'auto',
                 }}
               >
+                {/* Aspect trend chart if available (use aspectObj if provided) */}
+                {aspectObj && aspectObj.trend && (
+                  (() => {
+                    const trend = aspectObj.trend;
+                    const months = Object.keys(trend).sort();
+                    const getData = (sentiment) => months.map(m => trend[m][sentiment] || 0);
+                    return (
+                      <div className="mb-4">
+                        <div className="text-center font-semibold text-gray-700 mt-0 mb-1">Aspect Sentiment Trend Over Time</div>
+                        <TrendLineChart
+                          labels={months}
+                          datasets={[
+                            { label: 'Positive', data: getData('positive'), color: '#3b82f6' },
+                            { label: 'Negative', data: getData('negative'), color: '#FFA07A' },
+                            { label: 'Neutral', data: getData('neutral'), color: '#facc15' },
+                          ]}
+                          height={180}
+                        />
+                        
+                      </div>
+                    );
+                  })()
+                )}
                 <div className="text-gray-700 text-sm">
+                  {Array.isArray(keywordSamples[kw]) && keywordSamples[kw].length > 0 && (
+                    <div className="font-semibold mb-2">Sample Reviews</div>
+                  )}
                   {Array.isArray(keywordSamples[kw])
-                    ? keywordSamples[kw].map((r, i) => <div key={i} className="mb-2">{r}</div>)
+                    ? keywordSamples[kw].map((r, i) => <div key={i} className="mb-2"><span className="font-semibold mr-1">{i + 1}.</span>{r}</div>)
                     : keywordSamples[kw]}
                 </div>
               </div>,

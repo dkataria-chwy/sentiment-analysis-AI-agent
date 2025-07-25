@@ -179,6 +179,7 @@ async def run_analysis_async(sku: str, job_id: str):
     jobs[job_id]["aspect_results"] = aspect_results
     aspect_summary = aggregate_aspect_sentiment(aspect_results, cleaned_reviews, top_n=10, samples_per_aspect=3)
     jobs[job_id]["aspect_summary"] = aspect_summary
+    save_step_output("aspect", aspect_summary)
 
     # --- KeywordExtract ---
     jobs[job_id]["step"] = 4  # KeywordExtract

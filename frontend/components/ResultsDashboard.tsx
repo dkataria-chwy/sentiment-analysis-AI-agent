@@ -471,6 +471,7 @@ export default function ResultsDashboard({ data, summaryLoading, summaryError }:
                               keywords={[a.aspect]}
                               keywordSamples={{ [a.aspect]: samples }}
                               keywordSentiments={{ [a.aspect]: dominantSentiment }}
+                              aspectObj={a}
                             />
                           </td>
                           <td className="px-4 py-2 text-center">{a.positive.toFixed(1)}%</td>

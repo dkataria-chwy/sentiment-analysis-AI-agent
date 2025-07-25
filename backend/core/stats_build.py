@@ -104,15 +104,43 @@ def build_stats_summary(reviews: List[Dict], top_keywords: Dict[str, List[str]],
         'common_bigrams': common_bigrams,
     }
 
+def calculate_aspect_trend(aspect_results, cleaned_reviews):
+    from collections import defaultdict, Counter
+    aspect_trends = defaultdict(lambda: defaultdict(lambda: Counter()))
+    for idx, result in enumerate(aspect_results):
+        if not isinstance(result, dict):
+            continue
+        review = cleaned_reviews[idx] if idx < len(cleaned_reviews) else {}
+        date = review.get('created_date')
+        month = None
+        if date:
+            try:
+                if isinstance(date, str):
+                    dt = datetime.fromisoformat(date)
+                else:
+                    dt = date
+                month = dt.strftime('%Y-%m')
+            except Exception:
+                pass
+        for asp in result.get('aspects', []):
+            aspect = asp['aspect'].lower()
+            sentiment = asp['sentiment'].lower()
+            if month:
+                aspect_trends[aspect][month][sentiment] += 1
+    # Convert to regular dicts for JSON serialization
+    return {a: {m: dict(c) for m, c in months.items()} for a, months in aspect_trends.items()}
+
+
 def aggregate_aspect_sentiment(aspect_results, cleaned_reviews, top_n=10, samples_per_aspect=3):
     """
     aspect_results: output from batch_llm_extract_aspects (list of dicts with 'aspects')
     cleaned_reviews: list of cleaned review dicts (same order as aspect_results)
-    Returns: list of dicts [{aspect, positive, neutral, negative, mentions, sample_reviews: {positive: [...], neutral: [...], negative: [...]}}]
+    Returns: list of dicts [{aspect, positive, neutral, negative, mentions, sample_reviews: {positive: [...], neutral: [...], negative: [...]}, trend}]
     """
     from collections import defaultdict, Counter
     aspect_counts = defaultdict(lambda: Counter())
     aspect_samples = defaultdict(lambda: {'positive': [], 'neutral': [], 'negative': []})
+    aspect_trends = calculate_aspect_trend(aspect_results, cleaned_reviews)
     for idx, result in enumerate(aspect_results):
         if not isinstance(result, dict):
             continue
@@ -127,13 +155,16 @@ def aggregate_aspect_sentiment(aspect_results, cleaned_reviews, top_n=10, sample
     aspect_summary = []
     for aspect, counts in aspect_counts.items():
         total = counts['total']
-        aspect_summary.append({
+        trend = aspect_trends.get(aspect, {})
+        aspect_obj = {
             'aspect': aspect,
             'positive': 100 * counts['positive'] / total if total else 0,
             'neutral': 100 * counts['neutral'] / total if total else 0,
             'negative': 100 * counts['negative'] / total if total else 0,
             'mentions': total,
-            'sample_reviews': aspect_samples[aspect]
-        })
+            'sample_reviews': aspect_samples[aspect],
+            'trend': trend
+        }
+        aspect_summary.append(aspect_obj)
     aspect_summary.sort(key=lambda x: x['mentions'], reverse=True)
     return aspect_summary[:top_n] 
