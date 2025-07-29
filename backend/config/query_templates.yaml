@@ -1,5 +1,11 @@
 fetch_reviews:
   query: |
+    with get_parent_part_number as (
+      select 
+        distinct parent_product_part_number as sku
+      from edldb.chewybi.products
+      where product_part_number = '{sku}'
+    )
     select 
       cpr.PRODUCT_PART_NUMBER as sku,
       REVIEW_TXT as customer_review,
@@ -11,10 +17,11 @@ fetch_reviews:
       products.product_description_short,
       products.product_name as product_name,
       products.product_id,
-      'https://www.chewy.com/advantage-ii-flea-spot-treatment-dogs/dp/'||product_id as product_link
+      'https://www.chewy.com/'||pdpslug||'/dp/'||product_id as product_link
     from edldb.cdm.customer_product_rating as cpr
-    LEFT JOIN edldb.chewybi.products AS products
+    JOIN edldb.chewybi.products AS products
         ON cpr.product_part_number = products.product_part_number
     where 1=1
-    and cpr.PRODUCT_PART_NUMBER = '{sku}' 
+    and cpr.PRODUCT_PART_NUMBER = (select sku from get_parent_part_number)
+    and products.product_type ilike 'product'
     and moderation_status ilike 'APPROVED'

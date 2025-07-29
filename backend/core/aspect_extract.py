@@ -17,6 +17,12 @@ async def batch_llm_extract_aspects(reviews: List[str], batch_size: int = 25, ma
 
     system_prompt = """You are an expert product sentiment analyst specializing in customer reviews. Your task is to extract ALL product aspects and themes mentioned in reviews and analyze sentiment with high precision and consistency.
 
+IMPORTANT: You must extract ANY and ALL aspects or themes mentioned in the review, even if they are not in the list below. The list is for illustration only. Do not limit yourself to these examples. If you find an aspect or theme not in the list, you must still extract it using a clear, descriptive name.
+
+Example (aspect not in list):
+  Review: "The leash clip broke after a week."
+  Output: {"aspects": [{"aspect": "clip", "sentiment": "negative"}]}
+
 ASPECT EXTRACTION GUIDELINES:
 1. **Comprehensive Aspect Extraction**: Extract ANY product aspect or theme mentioned in the review, including but not limited to:
    - Physical properties such as: size, weight, texture, durability, material, color, shape
@@ -120,5 +126,3 @@ QUALITY CHECKS:
     
     await asyncio.gather(*tasks)
     return all_results
-
-

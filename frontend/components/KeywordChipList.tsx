@@ -102,8 +102,11 @@ export default function KeywordChipList({ keywords, keywordSamples, keywordSenti
                 }}
               >
                 <div className="text-gray-700 text-sm">
+                  {Array.isArray(keywordSamples[kw]) && keywordSamples[kw].length > 0 && (
+                    <div className="font-semibold mb-2">Sample Reviews</div>
+                  )}
                   {Array.isArray(keywordSamples[kw])
-                    ? keywordSamples[kw].map((r, i) => <div key={i} className="mb-2">{r}</div>)
+                    ? keywordSamples[kw].map((r, i) => <div key={i} className="mb-2"><span className="font-semibold mr-1">{i + 1}.</span>{r}</div>)
                     : keywordSamples[kw]}
                 </div>
               </div>,
