@@ -139,7 +139,8 @@ def aggregate_aspect_sentiment(aspect_results, cleaned_reviews, top_n=10, sample
     """
     from collections import defaultdict, Counter
     aspect_counts = defaultdict(lambda: Counter())
-    aspect_samples = defaultdict(lambda: {'positive': [], 'neutral': [], 'negative': []})
+    # aspect_samples = defaultdict(lambda: {'positive': [], 'neutral': [], 'negative': []})
+    aspect_samples = defaultdict(lambda: defaultdict(list))
     aspect_trends = calculate_aspect_trend(aspect_results, cleaned_reviews)
     for idx, result in enumerate(aspect_results):
         if not isinstance(result, dict):

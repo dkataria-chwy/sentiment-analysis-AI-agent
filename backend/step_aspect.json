@@ -1,160 +1,424 @@
 [
   {
-    "aspect": "leash length",
-    "positive": 33.333333333333336,
+    "aspect": "pet_enjoyment",
+    "positive": 78.08219178082192,
     "neutral": 0.0,
-    "negative": 66.66666666666667,
-    "mentions": 3,
+    "negative": 21.91780821917808,
+    "mentions": 73,
     "sample_reviews": {
       "positive": [
-        "This work great for my 20 la terrier mix The leash is long enough to give him some room to roam but still keep him close The clasp are bigger than his leash but not too heavy for him I've used while traveling and shopping work great"
+        "Great item for dog who love to chew",
+        "My 10 month old GSD/Malinois love this toy The large pretzel is the perfect size and the rubber is extremely durable She can catch it in the air and it also ha a fun bounce to it",
+        "As a human pretzel lover myself had to get a pretzel chew toy for my poodle Upon taking it out of the packaging,not only wa I impressed with the delicious smell of peanut butternut so wa my pup The texture is very soft and chewy,almost like a movie theatre or amusement park pretzel for your pup He loved the smell,the size,taste and the overall feel of this toy It kept him busy for a long time Highly reccomend!"
       ],
-      "neutral": [],
       "negative": [
-        "The leash is way too short and coiled way too tight to be useful Attached it to my waist him 5\u20194) my dog couldn't move to my side because the leash were too tight and the loop were in the front causing me to literally walk over them when attempting to use this Gave this two star because I use the belt still but with different leash and to carry other thing Super useful if you're thrifty",
-        "It is not long enough and it is too heavy for a 30 la dog"
+        "My bulldog didn't like this toy He licked it and didn't touch it again I tried throwing it holding it so he can chew it but he didn't want anything to do with it",
+        "Although I liked the texture my dog did not really care for it and neither the taste It wa not the best toy for him",
+        "She want nothing to do with this toy not desirable at all for dog"
       ]
     },
     "trend": {
-      "2018-12": {
-        "positive": 1
+      "2025-01": {
+        "positive": 6
       },
-      "2019-03": {
+      "2025-02": {
+        "positive": 3,
         "negative": 1
       },
-      "2018-06": {
+      "2024-09": {
+        "positive": 13,
+        "negative": 4
+      },
+      "2025-06": {
+        "positive": 3,
         "negative": 1
+      },
+      "2024-11": {
+        "positive": 8,
+        "negative": 2
+      },
+      "2024-12": {
+        "positive": 7,
+        "negative": 2
+      },
+      "2025-05": {
+        "positive": 3
+      },
+      "2025-07": {
+        "positive": 2,
+        "negative": 1
+      },
+      "2025-03": {
+        "negative": 2,
+        "positive": 3
+      },
+      "2025-04": {
+        "positive": 3,
+        "negative": 1
+      },
+      "2024-10": {
+        "positive": 6,
+        "negative": 2
       }
     }
   },
   {
-    "aspect": "clasp weight",
-    "positive": 0.0,
-    "neutral": 50.0,
-    "negative": 50.0,
-    "mentions": 2,
+    "aspect": "durability",
+    "positive": 53.73134328358209,
+    "neutral": 1.492537313432836,
+    "negative": 44.776119402985074,
+    "mentions": 67,
     "sample_reviews": {
-      "positive": [],
-      "neutral": [
-        "This work great for my 20 la terrier mix The leash is long enough to give him some room to roam but still keep him close The clasp are bigger than his leash but not too heavy for him I've used while traveling and shopping work great"
+      "positive": [
+        "It seems like a durable toy my pup ha chewed on it a little bit but doesn't have much interest in it",
+        "My 10 month old GSD/Malinois love this toy The large pretzel is the perfect size and the rubber is extremely durable She can catch it in the air and it also ha a fun bounce to it",
+        "My dog love this toy and haven't destroyed it yet Which for them is AMAZING"
       ],
       "negative": [
-        "This is not good for a small dog the leash is heavier than her I recommend making a version that ha a lighter clasp a well a lighter material"
+        "didn't work for my dog who is an aggressive chewer Hunks came off of it",
+        "I am a very frequent user of chewy My pup love to chew and play tug of war I buy him Benebones and they only last for a few day I wa hoping this the Frisco chew toy would last longer it didn't I gave it to my pup used the restroom and when I came out he already bit off a little more than a dime size of the toy The piece wa nowhere to be found so I assume he ate it Very disappointed in this item",
+        "They really should test these toy that are for tough chewer before marketing them a such This one didn't even last a half a day and in fact it may not have even been a day"
+      ],
+      "neutral": [
+        "I have a really tough chewer and this one last almost a week until she started to break down the end of the pretzel Both my girl loved it but you still have to watch these tough chewer"
       ]
     },
     "trend": {
-      "2018-12": {
+      "2024-11": {
+        "positive": 6,
+        "negative": 5
+      },
+      "2025-02": {
+        "positive": 1,
+        "negative": 2
+      },
+      "2025-03": {
+        "negative": 4,
+        "positive": 2
+      },
+      "2025-06": {
+        "negative": 1,
+        "positive": 2
+      },
+      "2025-01": {
+        "positive": 5,
+        "negative": 2
+      },
+      "2025-04": {
+        "negative": 2,
+        "positive": 4
+      },
+      "2024-09": {
+        "positive": 9,
+        "negative": 1
+      },
+      "2024-12": {
+        "negative": 4,
+        "positive": 4
+      },
+      "2025-07": {
+        "neutral": 1,
+        "negative": 2,
+        "positive": 1
+      },
+      "2025-05": {
+        "negative": 2
+      },
+      "2024-10": {
+        "positive": 2,
+        "negative": 5
+      }
+    }
+  },
+  {
+    "aspect": "pet_interest",
+    "positive": 9.30232558139535,
+    "neutral": 4.651162790697675,
+    "negative": 86.04651162790698,
+    "mentions": 43,
+    "sample_reviews": {
+      "negative": [
+        "I'm not sure if it's the flavor or texture She eats most thing so I'm going to assume texture",
+        "it's sitting in her toy box forgotten We will reintroduce when she tire of the others",
+        "It seems like a durable toy my pup ha chewed on it a little bit but doesn't have much interest in it"
+      ],
+      "positive": [
+        "My dog immediately started to play with it",
+        "My dog wa a little afraid of this toy to start But he ha slowly grown to really enjoy playing with it It did have an awful scent straight out of package but it ha dissipated He enjoys chewing on it now",
+        "The large bone for big dog he got he been guarding all day Thank you so much for your great selection of treat and toy for dog"
+      ],
+      "neutral": [
+        "don't love or hate this product My dog wa very interested to start but the interest quickly wore off I like that it doesn't get slimy after she chew on it and it doesn't have an aggressive smell",
+        "Pup wa really into at first but really hasn't been interested in it after the first 2 day or so"
+      ]
+    },
+    "trend": {
+      "2025-01": {
+        "negative": 4
+      },
+      "2025-04": {
+        "negative": 3,
+        "positive": 1
+      },
+      "2024-11": {
+        "negative": 4
+      },
+      "2024-12": {
+        "negative": 3,
+        "neutral": 1,
+        "positive": 1
+      },
+      "2024-09": {
+        "negative": 3,
+        "neutral": 1,
+        "positive": 1
+      },
+      "2024-10": {
+        "negative": 4
+      },
+      "2025-02": {
+        "negative": 5
+      },
+      "2025-03": {
+        "positive": 1,
+        "negative": 4
+      },
+      "2025-05": {
+        "negative": 3
+      },
+      "2025-06": {
+        "negative": 2
+      },
+      "2025-07": {
+        "negative": 2
+      }
+    }
+  },
+  {
+    "aspect": "smell",
+    "positive": 37.93103448275862,
+    "neutral": 3.4482758620689653,
+    "negative": 58.62068965517241,
+    "mentions": 29,
+    "sample_reviews": {
+      "negative": [
+        "When unpackaged, this item ha a horrible toxic smell to it I would not purchase again",
+        "No enticing scent and very heavy hard rubber",
+        "I bought this for my dog's 5 birthday wanted to give it to her today however the chemical smell is so strong I can't Even after washing with Dawn soap a per instruction that it's washable the smell is apparent I hope to return it Too bad"
+      ],
+      "positive": [
+        "As a human pretzel lover myself had to get a pretzel chew toy for my poodle Upon taking it out of the packaging,not only wa I impressed with the delicious smell of peanut butternut so wa my pup The texture is very soft and chewy,almost like a movie theatre or amusement park pretzel for your pup He loved the smell,the size,taste and the overall feel of this toy It kept him busy for a long time Highly reccomend!",
+        "Older dog is enjoying this treat chew Shape and size is perfect for my Cairn terrier She seems to enjoy this chew and it seems pretty indestructible Made of rubber doesn't have a bad odor so that's a plus",
+        "I thought she would love it because even I can smell the peanut butter flavor but she won't have anything to do with it"
+      ],
+      "neutral": [
+        "My mini dachshund puppy love this durable toy for chewing The texture feel good on his new adult teeth and he love a bouncy rubber chew to now on The scent wa kind of a mix between new rubber and peanut butter but the funky smell only lasted a couple day For a destructive chewer he ha yet to cause any dent in this one which is a good thing"
+      ]
+    },
+    "trend": {
+      "2025-02": {
+        "negative": 3,
+        "positive": 2
+      },
+      "2024-09": {
+        "positive": 9,
+        "negative": 2
+      },
+      "2025-01": {
+        "negative": 1
+      },
+      "2025-03": {
+        "negative": 4
+      },
+      "2025-05": {
+        "negative": 1
+      },
+      "2025-04": {
+        "negative": 2,
         "neutral": 1
       },
-      "2018-01": {
+      "2025-07": {
+        "negative": 1
+      },
+      "2024-10": {
+        "negative": 2
+      },
+      "2024-11": {
         "negative": 1
       }
     }
   },
   {
-    "aspect": "price",
-    "positive": 100.0,
-    "neutral": 0.0,
-    "negative": 0.0,
-    "mentions": 2,
+    "aspect": "size",
+    "positive": 66.66666666666667,
+    "neutral": 6.666666666666667,
+    "negative": 26.666666666666668,
+    "mentions": 15,
     "sample_reviews": {
       "positive": [
-        "For such a low price I wa impressed by the quality of this product I just had surgery and have limited use of my arm for the next few week - this leash let me walk my bulb pit who pull like no other Easy to used I'm thrilled",
-        "I have a lab/Shepard/husky mix and a few black lab who are close to 100 lab I walk daily and they pull like crazy This eliminates my shoulder pain and it keep them from tearing my arm off Love it Great price too can't beat it I didn't receive a pouch though like other review describe"
+        "My 10 month old GSD/Malinois love this toy The large pretzel is the perfect size and the rubber is extremely durable She can catch it in the air and it also ha a fun bounce to it",
+        "As a human pretzel lover myself had to get a pretzel chew toy for my poodle Upon taking it out of the packaging,not only wa I impressed with the delicious smell of peanut butternut so wa my pup The texture is very soft and chewy,almost like a movie theatre or amusement park pretzel for your pup He loved the smell,the size,taste and the overall feel of this toy It kept him busy for a long time Highly reccomend!",
+        "Older dog is enjoying this treat chew Shape and size is perfect for my Cairn terrier She seems to enjoy this chew and it seems pretty indestructible Made of rubber doesn't have a bad odor so that's a plus"
       ],
-      "neutral": [],
-      "negative": []
-    },
-    "trend": {
-      "2018-04": {
-        "positive": 1
-      },
-      "2018-10": {
-        "positive": 1
-      }
-    }
-  },
-  {
-    "aspect": "recommendation",
-    "positive": 100.0,
-    "neutral": 0.0,
-    "negative": 0.0,
-    "mentions": 2,
-    "sample_reviews": {
-      "positive": [
-        "I recommended this for my golden retriever who weighs 70 pound and this is so good to go to the beach and stuff",
-        "We use this leash all of the time I definitely recommend this belt/leash."
+      "neutral": [
+        "Received the small/medium pretzel maybe should\u2019ve had the larger one It took a few minute for my dog to notice it but when she did she loved it unfortunately it only lasted about seven minute before she'd managed to chew off and ingest one of the little nub It went into the trash i Maybe the donut would work Any little bit are her target"
       ],
-      "neutral": [],
-      "negative": []
-    },
-    "trend": {
-      "2018-06": {
-        "positive": 1
-      },
-      "2018-05": {
-        "positive": 1
-      }
-    }
-  },
-  {
-    "aspect": "leash weight",
-    "positive": 0.0,
-    "neutral": 0.0,
-    "negative": 100.0,
-    "mentions": 2,
-    "sample_reviews": {
-      "positive": [],
-      "neutral": [],
       "negative": [
-        "It is not long enough and it is too heavy for a 30 la dog",
-        "This is not good for a small dog the leash is heavier than her I recommend making a version that ha a lighter clasp a well a lighter material"
+        "Too heavy for a 9 pound dog",
+        "too big for dog",
+        "The product itself is super cute and well-made. It feel sturdy and ha some weight to it The peanut butter smell is subtle and doesn't seem too chemically all thing considered I admit that I haven't sampled the product myself so I can't comment on the taste All in all I imagine it could withstand some abuse I received the small/medium size the smallest available and it's simply too big for my little guy he's a hair under 8.5lbs and this is the size of his head i'm not sure he could even get his mouth around it He also isn't blessed in the having teeth department he's a senior not a pro boxer so this may just not be the toy for him He really didn't express any interest in it beyond a sniff but likely because of the toothlessness, chew toy have never really been his thing he's a stuffed animal guy Nothing against the product itself i'm only knocking off a star because the small size probably isn't suitable for many small dog for at least teensy dog"
       ]
     },
     "trend": {
-      "2018-06": {
+      "2025-02": {
+        "positive": 1
+      },
+      "2024-09": {
+        "positive": 6,
+        "neutral": 1,
         "negative": 1
       },
-      "2018-01": {
+      "2024-10": {
+        "positive": 1,
+        "negative": 1
+      },
+      "2024-12": {
+        "positive": 1
+      },
+      "2025-04": {
+        "positive": 1,
+        "negative": 1
+      },
+      "2025-03": {
         "negative": 1
       }
     }
   },
   {
-    "aspect": "clasp size",
-    "positive": 0.0,
-    "neutral": 100.0,
-    "negative": 0.0,
-    "mentions": 1,
+    "aspect": "texture",
+    "positive": 85.71428571428571,
+    "neutral": 7.142857142857143,
+    "negative": 7.142857142857143,
+    "mentions": 14,
     "sample_reviews": {
-      "positive": [],
-      "neutral": [
-        "This work great for my 20 la terrier mix The leash is long enough to give him some room to roam but still keep him close The clasp are bigger than his leash but not too heavy for him I've used while traveling and shopping work great"
+      "negative": [
+        "I'm not sure if it's the flavor or texture She eats most thing so I'm going to assume texture"
       ],
-      "negative": []
+      "positive": [
+        "As a human pretzel lover myself had to get a pretzel chew toy for my poodle Upon taking it out of the packaging,not only wa I impressed with the delicious smell of peanut butternut so wa my pup The texture is very soft and chewy,almost like a movie theatre or amusement park pretzel for your pup He loved the smell,the size,taste and the overall feel of this toy It kept him busy for a long time Highly reccomend!",
+        "My dog isn't too interested in this one at all But it's much softer than other toy",
+        "don't love or hate this product My dog wa very interested to start but the interest quickly wore off I like that it doesn't get slimy after she chew on it and it doesn't have an aggressive smell"
+      ],
+      "neutral": [
+        "texture and taste most likely"
+      ]
     },
     "trend": {
-      "2018-12": {
+      "2025-01": {
+        "negative": 1,
+        "positive": 2
+      },
+      "2024-09": {
+        "positive": 6
+      },
+      "2024-12": {
+        "positive": 1
+      },
+      "2025-02": {
+        "positive": 1
+      },
+      "2024-10": {
         "neutral": 1
+      },
+      "2025-04": {
+        "positive": 1
+      },
+      "2025-07": {
+        "positive": 1
       }
     }
   },
   {
-    "aspect": "usability while traveling and shopping",
-    "positive": 100.0,
+    "aspect": "chew_appeal",
+    "positive": 70.0,
     "neutral": 0.0,
-    "negative": 0.0,
-    "mentions": 1,
+    "negative": 30.0,
+    "mentions": 10,
     "sample_reviews": {
       "positive": [
-        "This work great for my 20 la terrier mix The leash is long enough to give him some room to roam but still keep him close The clasp are bigger than his leash but not too heavy for him I've used while traveling and shopping work great"
+        "Great item for dog who love to chew",
+        "Bought it for a dog that like thing that are hard to chew She love it",
+        "we have an almost 9 month old puppy who is a heavy chewer she had this in piece in under a minute"
       ],
-      "neutral": [],
-      "negative": []
+      "negative": [
+        "Not for heavy chewer Within 10 minute a chunk wa chewed off Bought 2 & returning them",
+        "i tossed this to my pup while i broke down the shipping box for recycling i probably left her with it for 3 minute and came back to find a chunk of the toy missing it may not look like much but the piece she threw up half a day later wa pretty sizable i kind of regret not taking a pic of that a well i know i always making a gamble when i buy toy marketed for tough chewer so i like to give some grace but this one ha to be a record for my girl i barely had a chance to step in and stop her if you're doubtful of your pup having this toy maybe skip this purchase invest in a handful of song and fill them up with tasty frozen treat instead i",
+        "It took 2 min to get a piece loose not a good toy for chewer"
+      ]
     },
     "trend": {
-      "2018-12": {
+      "2025-01": {
         "positive": 1
+      },
+      "2024-12": {
+        "negative": 1,
+        "positive": 2
+      },
+      "2025-03": {
+        "positive": 1
+      },
+      "2024-09": {
+        "positive": 1
+      },
+      "2025-07": {
+        "positive": 1
+      },
+      "2025-04": {
+        "positive": 1,
+        "negative": 1
+      },
+      "2024-10": {
+        "negative": 1
+      }
+    }
+  },
+  {
+    "aspect": "pet_safety",
+    "positive": 0.0,
+    "neutral": 20.0,
+    "negative": 80.0,
+    "mentions": 10,
+    "sample_reviews": {
+      "negative": [
+        "My dog loved chewing on it but he wa able to gnaw off piece and swallow them I had to throw it away",
+        "This toy is not a hard toy fall apart and easy for the dog to eat",
+        "Received the small/medium pretzel maybe should\u2019ve had the larger one It took a few minute for my dog to notice it but when she did she loved it unfortunately it only lasted about seven minute before she'd managed to chew off and ingest one of the little nub It went into the trash i Maybe the donut would work Any little bit are her target"
+      ],
+      "neutral": [
+        "I have a really tough chewer and this one last almost a week until she started to break down the end of the pretzel Both my girl loved it but you still have to watch these tough chewer",
+        "I had to give this pretzel a shot when I read it wa a durable chew toy It ha a rubber texture and my 2 year old Aussie ha in the past destroyed these sort of chew toy in minute He straight up shred it so you know I wa worried about if it'll handle his tough chewing I wa honestly not expecting it to be a durable a it wa I'm truly shocked by it While he did chew off the two little pretzel nub the rest of the pretzel ha held together Even chewing off the nub took him about an hour to do so A few hour of chewing after that and the rest of it ha no puncture still While it's the most durable rubber chew I have found it's still not a chew toy I would feel comfortable letting him have without supervision I highly recommend this chew He wa so excited just from the smell alone He wouldn't wait to let me get some picture It also ha little groove to help with teeth cleaning I found the groove were great to put a little doggie toothpaste in for some extra cleaning action a well"
+      ]
+    },
+    "trend": {
+      "2024-11": {
+        "negative": 1
+      },
+      "2025-07": {
+        "neutral": 1,
+        "negative": 1
+      },
+      "2024-12": {
+        "negative": 2
+      },
+      "2024-09": {
+        "negative": 1,
+        "neutral": 1
+      },
+      "2025-01": {
+        "negative": 1
+      },
+      "2024-10": {
+        "negative": 2
       }
     }
   },
@@ -163,54 +427,65 @@
     "positive": 100.0,
     "neutral": 0.0,
     "negative": 0.0,
-    "mentions": 1,
+    "mentions": 8,
     "sample_reviews": {
       "positive": [
-        "For such a low price I wa impressed by the quality of this product I just had surgery and have limited use of my arm for the next few week - this leash let me walk my bulb pit who pull like no other Easy to used I'm thrilled"
-      ],
-      "neutral": [],
-      "negative": []
-    },
-    "trend": {
-      "2018-04": {
-        "positive": 1
-      }
-    }
-  },
-  {
-    "aspect": "ease of use",
-    "positive": 100.0,
-    "neutral": 0.0,
-    "negative": 0.0,
-    "mentions": 1,
-    "sample_reviews": {
-      "positive": [
-        "For such a low price I wa impressed by the quality of this product I just had surgery and have limited use of my arm for the next few week - this leash let me walk my bulb pit who pull like no other Easy to used I'm thrilled"
-      ],
-      "neutral": [],
-      "negative": []
-    },
-    "trend": {
-      "2018-04": {
-        "positive": 1
-      }
-    }
-  },
-  {
-    "aspect": "leash coil/tightness",
-    "positive": 0.0,
-    "neutral": 0.0,
-    "negative": 100.0,
-    "mentions": 1,
-    "sample_reviews": {
-      "positive": [],
-      "neutral": [],
-      "negative": [
-        "The leash is way too short and coiled way too tight to be useful Attached it to my waist him 5\u20194) my dog couldn't move to my side because the leash were too tight and the loop were in the front causing me to literally walk over them when attempting to use this Gave this two star because I use the belt still but with different leash and to carry other thing Super useful if you're thrifty"
+        "Well made The dog only chewed it for about 20 minute then she wa done with it",
+        "This toy is chunky and heavy even for big dog i ordered the large/x-large).and seems well made My dog didn't use it very much because he ha teeth issue I think it would be good to help keep teeth clean for a large dog He wasn't particularly interested in the flavor I would only use this toy with supervision because I'd be concerned the dog could chew chunk loose and possibly choke on them but I believe all toy use should be supervised Four star instead of five because it is very heavy even for my big boy",
+        "Great item My dog loved it Well made and durable"
       ]
     },
     "trend": {
-      "2019-03": {
+      "2024-11": {
+        "positive": 1
+      },
+      "2024-09": {
+        "positive": 3
+      },
+      "2025-01": {
+        "positive": 2
+      },
+      "2024-12": {
+        "positive": 1
+      },
+      "2025-06": {
+        "positive": 1
+      }
+    }
+  },
+  {
+    "aspect": "weight",
+    "positive": 25.0,
+    "neutral": 12.5,
+    "negative": 62.5,
+    "mentions": 8,
+    "sample_reviews": {
+      "negative": [
+        "This toy is chunky and heavy even for big dog i ordered the large/x-large).and seems well made My dog didn't use it very much because he ha teeth issue I think it would be good to help keep teeth clean for a large dog He wasn't particularly interested in the flavor I would only use this toy with supervision because I'd be concerned the dog could chew chunk loose and possibly choke on them but I believe all toy use should be supervised Four star instead of five because it is very heavy even for my big boy",
+        "No enticing scent and very heavy hard rubber",
+        "Too heavy for a 9 pound dog"
+      ],
+      "positive": [
+        "The product itself is super cute and well-made. It feel sturdy and ha some weight to it The peanut butter smell is subtle and doesn't seem too chemically all thing considered I admit that I haven't sampled the product myself so I can't comment on the taste All in all I imagine it could withstand some abuse I received the small/medium size the smallest available and it's simply too big for my little guy he's a hair under 8.5lbs and this is the size of his head i'm not sure he could even get his mouth around it He also isn't blessed in the having teeth department he's a senior not a pro boxer so this may just not be the toy for him He really didn't express any interest in it beyond a sniff but likely because of the toothlessness, chew toy have never really been his thing he's a stuffed animal guy Nothing against the product itself i'm only knocking off a star because the small size probably isn't suitable for many small dog for at least teensy dog",
+        "This is a hefty rubber chew toy with a banana scent My 100 pound golden retriever will carry it around but doesn't enjoy chewing it My chihuahua often share bone with my golden but this is too heavy for her to lift"
+      ],
+      "neutral": [
+        "I wa worried about my dog not liking it because it is a hard toy and he lost all of his front tooth I wa wrong he enjoys the new toy and carry it around The toy is solid and a bit heavy he chew it with his bath teeth and enjoys playing fetch with it"
+      ]
+    },
+    "trend": {
+      "2024-09": {
+        "negative": 1,
+        "positive": 2,
+        "neutral": 1
+      },
+      "2025-01": {
+        "negative": 1
+      },
+      "2025-04": {
+        "negative": 2
+      },
+      "2025-03": {
         "negative": 1
       }
     }
