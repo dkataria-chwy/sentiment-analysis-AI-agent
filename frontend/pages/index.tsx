@@ -37,9 +37,9 @@ export default function Home() {
         <form onSubmit={handleSubmit} className="bg-white rounded-2xl border border-gray-200 shadow-2xl p-10 w-full max-w-xl">
           <h2 className="text-xl font-semibold mb-2">Start New Product Analysis</h2>
           <p className="mb-4 text-gray-500">
-            Just type in the product name (for example, "131886") and we'll analyze the customer reviews.
+            Just type in the SKU or Parent SKU (for e.g, "1055134" or "1055118") and we'll analyze the customer reviews.
           </p>
-          <label className="block text-sm font-medium text-gray-700 mb-1">Product part number</label>
+          <label className="block text-sm font-medium text-gray-700 mb-1">SKU or Parent SKU</label>
           <textarea
             className="w-full border border-gray-300 rounded-lg px-4 py-3 mb-2 focus:outline-none focus:ring-2 focus:ring-blue-500"
             placeholder="e.g., 131886"
@@ -49,7 +49,7 @@ export default function Home() {
             disabled={loading}
           />
           <div className="text-xs text-gray-400 mb-4">
-            Be specific about what you want to research for better results
+          Be specific to enter the SKU or Parent SKU to research for better results
           </div>
           {error && <div className="text-red-500 text-sm mb-2">{error}</div>}
           {/* Animated colorful border on the button itself */}

@@ -341,25 +341,6 @@ export default function ResultsDashboard({ data, summaryLoading, summaryError }:
                     </div>
                   );
                 })()}
-                {/* Sentiment Confidence */}
-                {data.stats.sentiment_confidence && (
-                  <div>
-                    <div className="font-semibold mb-2 mt-4">Sentiment Model Confidence</div>
-                    <div className="grid grid-cols-3 gap-2 text-xs">
-                      {['positive', 'neutral', 'negative'].map(sent => (
-                        <div key={sent} className="flex flex-col items-center">
-                          <span className={
-                            sent === 'positive' ? 'text-blue-700' : sent === 'negative' ? 'text-[#D97706]' : 'text-yellow-600'
-                          }>{sent.charAt(0).toUpperCase() + sent.slice(1)}</span>
-                          <span>Avg: <span className="font-bold">{(data.stats.sentiment_confidence[sent]?.avg ?? 0).toFixed(2)}</span></span>
-                          <span>Min: <span className="font-bold">{(data.stats.sentiment_confidence[sent]?.min ?? 0).toFixed(2)}</span></span>
-                          <span>Max: <span className="font-bold">{(data.stats.sentiment_confidence[sent]?.max ?? 0).toFixed(2)}</span></span>
-                          <span>Std: <span className="font-bold">{(data.stats.sentiment_confidence[sent]?.std ?? 0).toFixed(2)}</span></span>
-                        </div>
-                      ))}
-                    </div>
-                  </div>
-                )}
               </div>
             </div>
           )}
@@ -375,15 +356,24 @@ export default function ResultsDashboard({ data, summaryLoading, summaryError }:
             const topNeg = Object.entries(negSamples)
               .sort((a, b) => (Array.isArray(b[1]) ? b[1].length : 1) - (Array.isArray(a[1]) ? a[1].length : 1))
               .slice(0, 10);
-            // Merge and tag
-            const keywords = [
-              ...topPos.map(([kw]) => kw),
-              ...topNeg.map(([kw]) => kw),
-            ];
-            const keywordSentiments = Object.fromEntries([
-              ...topPos.map(([kw]) => [kw, 'positive']),
-              ...topNeg.map(([kw]) => [kw, 'negative']),
-            ]);
+            // Deduplicate keywords, prefer positive if present in both
+            const keywordSet = new Set();
+            const keywords = [];
+            const keywordSentiments = {};
+            for (const [kw] of topPos) {
+              if (!keywordSet.has(kw)) {
+                keywords.push(kw);
+                keywordSentiments[kw] = 'positive';
+                keywordSet.add(kw);
+              }
+            }
+            for (const [kw] of topNeg) {
+              if (!keywordSet.has(kw)) {
+                keywords.push(kw);
+                keywordSentiments[kw] = 'negative';
+                keywordSet.add(kw);
+              }
+            }
             const keywordSamples = { ...posSamples, ...negSamples };
             return (
               <KeywordChipList
@@ -471,6 +461,7 @@ export default function ResultsDashboard({ data, summaryLoading, summaryError }:
                               keywords={[a.aspect]}
                               keywordSamples={{ [a.aspect]: samples }}
                               keywordSentiments={{ [a.aspect]: dominantSentiment }}
+                              aspectObj={a}
                             />
                           </td>
                           <td className="px-4 py-2 text-center">{a.positive.toFixed(1)}%</td>

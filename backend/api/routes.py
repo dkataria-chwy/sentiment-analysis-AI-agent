@@ -60,6 +60,12 @@ async def run_analysis_async(sku: str, job_id: str):
         reviews.append(review)
         if len(reviews) >= 15000:
             break
+    if len(reviews) == 0:
+        jobs[job_id]["status"] = "no_data"
+        jobs[job_id]["step"] = 0
+        jobs[job_id]["result"] = {"error": f"No data fetched for SKU {sku}", "sku": sku}
+        save_step_output(1, reviews)
+        return
     jobs[job_id]["reviews"] = reviews
     save_step_output(1, reviews)
     logging.info(f"Fetched {len(reviews)} reviews. Starting null/dup filter.")
@@ -270,6 +276,8 @@ async def get_status(job_id: str):
     resp = {"status": job["status"], "step": job.get("step", 0)}
     if job.get("step", 0) == 1 and "cleantext_substeps" in job:
         resp["cleantext_substeps"] = job["cleantext_substeps"]
+    if job["status"] == "no_data" and "result" in job:
+        resp["result"] = job["result"]
     return resp
 
 @router.get("/results/{job_id}")
