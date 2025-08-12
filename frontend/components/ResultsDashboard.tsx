@@ -138,7 +138,7 @@ export default function ResultsDashboard({ data, summaryLoading, summaryError }:
         >Analyze another SKU</button>
       </div>
 
-      <div className="relative max-w-7xl mx-auto mb-24 p-8 bg-white/80 backdrop-blur-md rounded-2xl shadow-2xl border-2 border-blue-300/60 flex flex-col overflow-hidden">
+      <div id="results-dashboard-card" className="relative max-w-7xl mx-auto mb-24 p-8 bg-white/80 backdrop-blur-md rounded-2xl shadow-2xl border-2 border-blue-300/60 flex flex-col overflow-hidden min-h-[680px] md:min-h-[720px]">
         {/* Product Info Display (styled header) */}
         {data?.product_info && (
           <div className="mb-4">
@@ -187,7 +187,7 @@ export default function ResultsDashboard({ data, summaryLoading, summaryError }:
         {/* Left accent bar */}
         <div className="absolute left-0 top-0 h-full w-0 bg-gradient-to-b from-blue-500 via-purple-400 to-pink-400 rounded-l-2xl" />
         {/* Card content */}
-        <div className="pl-6" id="results-dashboard-card">
+        <div className="pl-6">
           {/* Community Sentiment Bar */}
           {data?.stats?.sentiment_counts && data?.stats?.sentiment_percentages && (() => {
             // Determine order: majority sentiment first

@@ -20,6 +20,10 @@ export default function Home() {
     setError(err);
     if (err) return;
     setLoading(true);
+    // Fire event to start dancing dots overlay
+    if (typeof window !== 'undefined') {
+      window.dispatchEvent(new Event('dots:start'));
+    }
     try {
       const res = await axios.post(`${process.env.NEXT_PUBLIC_API_BASE_URL}/api/analyze/${sku}`);
       router.push(`/processing?jobId=${res.data.job_id}`);
@@ -27,6 +31,10 @@ export default function Home() {
       setError(e?.response?.data?.detail || 'Failed to start analysis.');
     } finally {
       setLoading(false);
+      // Stop overlay if request fails
+      if (typeof window !== 'undefined') {
+        window.dispatchEvent(new Event('dots:stop'));
+      }
     }
   };
 
